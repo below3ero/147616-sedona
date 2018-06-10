@@ -11,17 +11,17 @@
   				<img src="img/logo.png" width="138" height="70" alt="Логотип города Седона">
   			</a>
   			<ul class="site-navigation">
-  				<li class="nav-button"><a href="info.html">Информация</a></li>
-  				<li class="nav-button"><a href="photo-video.html">Фото и видео</a></li>
-  				<li class="nav-button"><a href="map.html">Карта штата</a></li>
-  				<li class="nav-button"><a href="hotels.html">Гостиницы</a></li>
+  				<li class="nav-button" tabindex="1"><a href="info.html">Информация</a></li>
+  				<li class="nav-button" tabindex="2"><a href="photo-video.html">Фото и видео</a></li>
+  				<li class="nav-button" tabindex="3"><a href="map.html">Карта штата</a></li>
+  				<li class="nav-button" tabindex="4"><a href="hotels.html">Гостиницы</a></li>
   			</ul>
   		</nav>
   	</header>
   	<main class="container">
   		<h1 class="visually-hidden">Город Седона</h1>
   		<section class="advertisement">
-  			<img src="img/promo-text.svg" width="458" height="352" alt="Приветственный слоган">
+  			<img src="img/promo-text.png" width="458" height="352" alt="Приветственный слоган">
   			<p class="advertisement-about">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
   		</section>
   		<section class="content">
@@ -72,7 +72,7 @@
 		<section class="location">
 			<h2>Заинтересовались?</h2>
 			<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-			<img src="img/map.png" height="593" width="1200" alt="Карта с меткой"> 
+			<img src="img/map.png" height="593" width="1200" alt="Sedona, Arizona state, USA"> 
 		</section>
   	</main>
   		<footer class="main-footer">
@@ -85,20 +85,42 @@
 			</ul>
 		</div>
 		<div class="footer-copyright">
-			<a class="link-copyright" href="https://htmlacademy.ru"><img src="img/footer-logo-name.svg" height="41" width="115" alt="Логотип HTML Academy">HTML Academy</a>
+			<span>WEBSITE BY</span>
+			<a class="link-copyright" href="https://htmlacademy.ru"><img src="img/footer-logo-name.svg" height="41" width="115" alt="Логотип HTML Academy"></a>
 		</div>
 	</footer>
 	<section class="modal-search">
-		<h2>Поиск гостиницы в Седоне</h2>
 		<ul class="modal-dates">
-			<li>Дата заезда</li>
-			<li>Дата выезда</li>
-		</ul>
-		<ul class="modal-persons">
-			<li>Взрослые</li>
-			<li>Дети</li>
-		</ul>
-		<a class="button" href="hotels-search.html">Найти</a>
+		<h2>Поиск гостиницы в Седоне</h2>
+		<form class="modal-hotels-search" action="htpps://echo.htmlacademy.ru" method="get">
+				<p class="modal-hotels-search-item">
+					<label for="checkin-date">ДАТА ЗАЕЗДА:</label>
+					<input id="checkin-date" type="text" name="checkin" value="" placeholder="24 АПРЕЛЯ 2017">
+					<img src="img/modal/calendar.png" width="21" height="22" alt="Календарь">
+				</p>
+				<!-- <input type="number" min="1" max="31" name="day">
+				<input type="month" name="month"> -->
+				<p class="modal-hotels-search-item">
+					<label for="checkout-date">ДАТА ВЫЕЗДА:</label>
+					<input id="checkout-date" type="text" name="checkout" value="" placeholder="4 ИЮЛЯ 2017">
+					<img src="img/modal/calendar.png" width="21" height="22" alt="Календарь">
+				</p>
+			</ul>
+			<p class="modal-adults">
+				<span>Взрослые</span>
+				<input type="image" src="img/modal/minus.svg" alt="Убрать взрослого">
+				<!-- <button><img src="img/modal/minus.svg" alt="Убрать взрослого"></button> -->
+				<!-- <output> -->
+				<input type="image" src="img/modal/plus.svg" alt="Добавить взрослого">
+			</p>
+			<p class="modal-children">
+				<span>Дети</span>
+				<input type="image" src="img/modal/minus.svg" alt="Убрать ребенка">
+				<input type="image" src="img/modal/plus.svg" alt="Добавить ребенка">
+			</p>
+			<button class="button" type="submit">Найти</button>
+		</form>
+			<button class="modal-close" type="button">Закрыть</button>
 	</section>
   </body>
 </html>
