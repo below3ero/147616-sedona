@@ -7,14 +7,14 @@
   <body>
  	<header class="main-header">
   		<nav class="main-navigation">
-  			<a class="main-header-logo" href="index.html">
+  			<a class="main-header-logo" href="index.html" tabindex="1">
   				<img src="img/logo.png" width="138" height="70" alt="Логотип города Седона">
   			</a>
   			<ul class="site-navigation">
-  				<li><a href="index.html">Информация</a></li>
-  				<li><a href="photo-video.html">Фото и видео</a></li>
-  				<li><a href="map.html">Карта штата</a></li>
-  				<li class="site-navigation-current"><a href="hotels.html">Гостиницы</a></li>
+  				<li><a href="index.html" tabindex="2">Информация</a></li>
+  				<li><a href="photo-video.html" tabindex="3">Фото и видео</a></li>
+  				<li><a href="map.html" tabindex="4">Карта штата</a></li>
+  				<li class="site-navigation-current"><a href="hotels.html" tabindex="5">Гостиницы</a></li>
   			</ul>
   		</nav>
   	</header>
@@ -22,7 +22,44 @@
   		<h1 class="visually-hidden">Поиск гостиниц</h1>
   		<section class="filters">
   			<h2 class="visually-hidden">Фильтр поиска</h2>
-			<!-- форма поиска гостиниц -->
+			<form class="filter" method="get" action="https://echo.htmlacademy.ru">
+				<fieldset class="filter-infrastructure">
+					<legend>Инфраструктура:</legend>
+						<ul>
+							<li class="filter-infrastructure-item">
+								Бассейн
+							</li>
+							<li class="filter-infrastructure-item">
+								Парковка
+							</li>
+							<li class="filter-infrastructure-item">
+								WI-FI
+							</li>
+						</ul>
+				</fieldset>
+				<fieldset class="filter-type">
+					<legend>Тип жилья:</legend>
+						<ul>
+							<li class="filter-type-item">
+								Гостиница
+							</li>
+							<li class="filter-type-item">
+								Мотель
+							</li>
+							<li class="filter-type-item">
+								Апартаменты
+							</li>
+						</ul>
+				</fieldset>
+				<fieldset class="filter-rent-price">
+					<legend>Стоимость в сутки (Р):</legend>
+						<output name="price-range-low">[1]</output>
+						<input type="range" name="price-range-low" min="0" max="1500" list="range-list1">
+						<output name="price-range-high">[2]</output>
+						<input type="range" name="price-range-high" min="1501" max="3000" list="range-list2">
+						<p><button class="button" type="submit">Показать</button></p>
+				</fieldset>
+			</form>
   		</section>
   		<section class="search-navigation">
   			<h2 class="visually-hidden">Панель управления поиском</h2>
@@ -35,8 +72,8 @@
   				<li class="filter-item" href="#">По рейтингу</li>
   			</ul>
   			<ul class="results-sort">
-  				<li class="sort-button"><button="#"></button></li>
-  				<li class="sort-button"><button="#"></button></li>
+  				<li class="sort-button"><input type="image" src="img/hotels/icon-up-dir-grey.svg"></li>
+  				<li class="sort-button"><input type="image" src="img/hotels/icon-down-dir-blue.svg"></li>
   			</ul>
   		</section>
   		<section class="search-results">
@@ -45,17 +82,24 @@
   				<li class="search-item">
   					<h3 class="item-header">Amara Resort & SPA</h3>
   					<img class="hotel-photo" src="img/hotels/amara.jpg" width="135" height="90" alt="Фото отеля">
+  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
   					<p class="hotel-type">Гостиница</p>
   					<p class="hotel-price">От 4000 Р.</p>
   						<ul class="search-nav-buttons">
   							<li><a href="#">Подробнее</a></li>
   							<li><a href="#">Забронировать</a></li>
-  						</li>
+  						</ul>
   					<p class="rating">Рейтинг: 8,5</p>
   				</li>
   				<li class="search-item">
   					<h3 class="item-header">Desert Quail Inn</h3>
   					<img class="hotel-photo" src="img/hotels/desert-quail.jpg" width="135" height="90" alt="Фото отеля">
+  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
   					<p class="hotel-type">Мотель</p>
   					<p class="hotel-price">От 3000 Р.</p>
   						<ul class="search-nav-buttons">
@@ -67,6 +111,8 @@
   				<li class="search-item">
   					<h3 class="item-header">Villas at Poco Diablo</h3>
   					<img class="hotel-photo" src="img/hotels/poco-diablo.jpg" width="135" height="90" alt="Фото отеля">
+  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
   					<p class="hotel-type">Апартаменты</p>
   					<p class="hotel-price">От 2000 Р.</p>
   						<ul class="search-nav-buttons">
