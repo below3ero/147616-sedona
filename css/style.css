@@ -6,7 +6,6 @@ body {
 	line-height: 21px;
 	color: #333333;
 	text-transform: uppercase;
-
 	background-color: #eeeeee;
 	background-image: url("img/background-photo.jpg");
 	background-position: top center;
@@ -243,4 +242,137 @@ input[type="image"] {
 	border: 2px solid #ffffff;
 	border-radius: 1px;
 	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+	font: inherit;
+	background-color: #ffffff;
+	color: #000000;
+	border: 2px solid #ffffff;
+	border-radius: 1px;
+	text-transform: uppercase;
+}
+
+.search-navigation {
+	background-color: #ffffff;
+}
+
+.search-navigation p {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+}
+
+.search-navigation h3 {
+	font-size: 12px;
+	line-height: 18px;
+
+}
+
+.filter-sort {
+	font-size: 12px;
+	line-height: 18px;
+	color: #cacaca;
+	background-color: #ffffff;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px dotted #81b3d2;
+	text-transform: uppercase;
+}
+
+.filter-sort:hover,
+.filter-sort:focus {
+	color: #81b3d2;
+	border-bottom: 1px dotted #81b3d2;
+}
+
+.filter-sort:active {
+	color: #000000;
+	border: none;
+}
+
+.sort-button {
+	border: none;
+	background: none;
+	color: #cacaca;
+}
+
+/*.sort-button:hover {
+	color: #231f20;
+}*/
+.search-results {
+	background-color: #fefefe;
+}
+
+
+.item-header button {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+	border: none;
+	background-color: transparent;
+	text-transform: uppercase;
+}
+
+.item-header button:hover,
+.item-header button:focus {
+	color: #81b3d2;
+}
+
+.item-header button:active {
+	color: #cacaca;
+}
+
+.extra {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #81b3d2;
+}
+
+.extra:hover {
+	background-color: #669ec0;
+}
+
+.extra:active {
+	background-color: #5496bd;
+	color: #94b9d2;
+}
+
+.book {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #766357;
+}
+
+.book:hover {
+	background-color: #604e43;
+}
+
+.book:active {
+	background-color: #503e33;
+	color: #928a85;
+}
+
+.hotel-type,
+.hotel-price {
+	font-size: 14px;
+	line-height: 21px;
+}
+
+.rating {
+	font-size: 14px;
+	line-height: 21px;
+	color: #666666;
+	background-color: #f2f2f2;
+}
+
+.inner-page .main-footer{
+	background-color: #fefefe;
 }
