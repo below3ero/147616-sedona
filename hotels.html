@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
  	<header class="main-header">
   		<nav class="main-navigation">
   			<a class="main-header-logo" href="index.html" tabindex="1">
@@ -23,9 +26,9 @@
   		<section class="filters">
   			<h2 class="visually-hidden">Фильтр поиска</h2>
 			<form class="filter" method="get" action="https://echo.htmlacademy.ru">
-				<fieldset class="filter-infrastructure">
-					<legend>Инфраструктура:</legend>
-						<ul>
+				<div class="filter-infrastructure">
+					<h2>Инфраструктура:</h2>
+						<ul class="infrastructure-list">
 							<li class="filter-infrastructure-item">
 								<input class="visually-hidden" type="checkbox" name="pool" checked id="swimming-pool">
 								<label for="swimming-pool">Бассейн</label>
@@ -39,10 +42,10 @@
 								<label for="wi-fi-spot">WI-FI</label>
 							</li>
 						</ul>
-				</fieldset>
-				<fieldset class="filter-type">
-					<legend>Тип жилья:</legend>
-						<ul>
+				</div>
+				<div class="filter-type">
+					<h2>Тип жилья:</h2>
+						<ul class="hotel-type">
 							<li class="filter-type-item">
 								<input class="visually-hidden" type="checkbox" name="hotel" id="filter-hotel" checked>
 								<label for="filter-hotel">Гостиница</label>
@@ -56,15 +59,15 @@
 								<label for="filter-apartments">Апартаменты</label>
 							</li>
 						</ul>
-				</fieldset>
-				<fieldset class="filter-rent-price">
-					<legend>Стоимость в сутки (Р):</legend>
+				</div>
+				<div class="filter-rent-price">
+					<h2>Стоимость в сутки (Р):</h2>
 						<output name="price-range-low">[1]</output>
 						<input type="range" name="price-range-low" min="0" max="1500" list="range-list1">
 						<output name="price-range-high">[2]</output>
 						<input type="range" name="price-range-high" min="1501" max="3000" list="range-list2">
-						<p><button class="button" type="submit">Показать</button></p>
-				</fieldset>
+						<p><button class="filter-button" type="submit">Показать</button></p>
+				</div>
 			</form>
   		</section>
   		<section class="search-navigation">
@@ -78,8 +81,14 @@
   				<li class="filter-item" href="#">По рейтингу</li>
   			</ul>
   			<ul class="results-sort">
-  				<li class="sort-button"><input type="image" src="img/hotels/icon-up-dir-grey.svg"></li>
-  				<li class="sort-button"><input type="image" src="img/hotels/icon-down-dir-blue.svg"></li>
+  				<li class="sort-button"><button type="button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 			width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+				<polyline fill="#231F20" points="5.5,10 0,0 11,0 "/>
+				</svg></button></li>
+  				<li class="sort-button"><button type="button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 			width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+				<polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
+				</svg></button></li>
   			</ul>
   		</section>
   		<section class="search-results">
@@ -87,11 +96,13 @@
   			<ul class="search-list">
   				<li class="search-item">
   					<h3 class="item-header">Amara Resort & SPA</h3>
-  					<img class="hotel-photo" src="img/hotels/amara.jpg" width="135" height="90" alt="Фото отеля">
-  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
-  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
-  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
-  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+	  				<div class="property-rating">
+	  					<img class="hotel-photo" src="img/hotels/amara.jpg" width="135" height="90" alt="Фото отеля">
+	  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+	  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+	  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+	  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+	  				</div>
   					<p class="hotel-type">Гостиница</p>
   					<p class="hotel-price">От 4000 Р.</p>
   						<ul class="search-nav-buttons">
@@ -103,9 +114,11 @@
   				<li class="search-item">
   					<h3 class="item-header">Desert Quail Inn</h3>
   					<img class="hotel-photo" src="img/hotels/desert-quail.jpg" width="135" height="90" alt="Фото отеля">
-  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
-  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
-  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+  					<div class="property-rating">
+	  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+	  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+	  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+	  				</div>
   					<p class="hotel-type">Мотель</p>
   					<p class="hotel-price">От 3000 Р.</p>
   						<ul class="search-nav-buttons">
@@ -117,8 +130,10 @@
   				<li class="search-item">
   					<h3 class="item-header">Villas at Poco Diablo</h3>
   					<img class="hotel-photo" src="img/hotels/poco-diablo.jpg" width="135" height="90" alt="Фото отеля">
-  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
-  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+  					<div class="property-rating">
+	  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+	  					<img class="rating-star" src="img/hotels/star-icon.svg" width="18" height="17" alt="Звезда">
+	  				</div>
   					<p class="hotel-type">Апартаменты</p>
   					<p class="hotel-price">От 2000 Р.</p>
   						<ul class="search-nav-buttons">
@@ -133,10 +148,14 @@
   	<footer class="main-footer">
 		<p class="footer-hashtag">#visitsedona</p>
 		<div class="footer-social">
-			<ul>
-				<li><a class="social-button" href="#"><img src="img/twitter-icon.svg" width="17" height="15" alt="Твитер">Твитер</a></li>
-				<li><a class="social-button" href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">Фейсбук</a></li>
-				<li><a class="social-button" href="#"><img src="img/youtube-icon.svg" width="20" height="16" alt="Ютуб">Ютуб</a></li>
+			<ul class="social-links">
+				<li><a class="social-button" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/></svg>Твитер</a></li>
+
+				<li><a class="social-button" href="#"><svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 			width="12px" height="22px" viewBox="0 0 12 22" enable-background="new 0 0 12 22" xml:space="preserve"><path fill="#FFFFFF" d="M12,4V0H8C5.791,0,4,1.791,4,4v4H0v4h4v10h4V12h4V8H8V4H12z"/>
+				</svg>Фейсбук</a></li>
+
+				<li><a class="social-button" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16"><path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/></svg>Ютуб</a></li>
 			</ul>
 		</div>
 		<div class="footer-copyright">
